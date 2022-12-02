@@ -44,7 +44,7 @@ const productSchema = mongoose.Schema({
       message: "Please provide valid image urls"
     }
   }],
-  categories: {
+  category: {
     type: String,
     required: true
   },

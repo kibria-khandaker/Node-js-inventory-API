@@ -1,17 +1,15 @@
-const express = require('express');
-const router = express.Router();
+const express = require("express");
 const brandController = require("../controllers/brand.controller");
 
-// router.route('/bulk-update').patch(brandController.bulkUpdateBrand)
-// router.route('/bulk-delete').delete(brandController.bulkDeleteBrand)
+const router = express.Router();
 
-router.route('/')
-    .get(brandController.getBrands)
-    .post(brandController.createBrand)
+router.route("/")
+  .post(brandController.createBrand)
+  .get(brandController.getBrands);
 
-router.route('/:id')
-    .get(brandController.getBrandById)
-    .patch(brandController.updateBrandById)
-    // .delete(brandController.deleteBrandById)
+router.route("/:id")
+  .get(brandController.getBrandById)
+  .patch(brandController.updateBrand);
+
 
 module.exports = router;

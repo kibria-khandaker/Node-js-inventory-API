@@ -14,7 +14,7 @@ const brandRoute = require('./routes/brand.route');
 
 //-------- 2
 app.get("/", (req, res) => {
-  res.send("Route is working! Broooooo!");
+  res.send("Route is working! Bro!");
 });
 
 // ---------- 4
